@@ -1,0 +1,12 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.2",
+    "datatables-plugins": "^1.10.11",
+    "datatables-responsive": "^2.0.2",
+    "jquery": "^2.2.3",
+    "metisMenu": "^2.5.2"
+  }
+}

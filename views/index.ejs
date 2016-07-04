@@ -1,0 +1,58 @@
+<%- include header %>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"> 监控信息
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <% cars.forEach(function(car){%>
+        <div class="col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="col-lg-4">
+                        <i class="fa fa-bar-chart-o fa-fw"></i>
+                        <a class='bg-primary' href="/carinfo?licence=<%= car.licence %>" >车牌：<%= car.licence%></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a class='bg-primary'  href="/userinfo?name=<%= car.name %>">司机：<%= car.name%></a>
+                    </div>
+                    <div class="text-right">
+                        <a class='bg-primary'  href="/delwatch?licence=<%= car.licence %>" >删除</a>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-bordered table-hover table-striped">
+                                <div class="row">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-lg-5">时间</th>
+                                        <th class="col-lg-4">地点</th>
+                                        <th class="col-lg-3">操作</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <% car.operalist.forEach(function(opera){ %>
+                                    <tr>
+                                        <td><%= opera.date %></td>
+                                        <td><%= opera.location %></td>
+                                        <td><%= opera.operation %></td>
+                                    </tr>
+                                    <% }) %>
+                                    </tbody>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<%- include footer %>

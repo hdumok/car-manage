@@ -1,0 +1,57 @@
+<%- include header %>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">车主信息</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <div>
+                             <label class="col-lg-3 col-lg-offset-3">车牌号</label>
+                             <label class="col-lg-5"><%= car.licence%></label>
+                             <br>
+                        </div>
+                        <div>
+                            <label class="col-lg-3 col-lg-offset-3">司机工号</label>
+                            <label class="col-lg-5"><%= car.id%></label>
+                            <br>
+                        </div>
+                        <div>
+                            <label class="col-lg-3 col-lg-offset-3">司机姓名</label>
+                            <label class="col-lg-5"><%= car.name%></label>
+                            <br>
+                        </div>
+                        <div >
+                            <label class="col-lg-3 col-lg-offset-3">司机性别</label>
+                            <label class="col-lg-5"><%= car.sex%></label>
+                            <br>
+                        </div>
+                        <div>
+                            <label class="col-lg-3 col-lg-offset-3">司机年龄</label>
+                            <label class="col-lg-5"><%= car.age%></label>
+                            <br>
+                        </div>
+                        <div >
+                            <label class="col-lg-3 col-lg-offset-3">司机电话</label>
+                            <label class="col-lg-5"><%= car.phone%></label>
+                            <br>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<%- include footer %>
